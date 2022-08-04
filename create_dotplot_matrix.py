@@ -229,8 +229,9 @@ def main():
 input - sequence in FASTA format
 run blast against itself and returns blast tables converted to density matrix
     """
-    description = "convert table with blast hits to matrix of densities"  # arguments
-    # parsing
+    description = "Run blast on sequence against itself and blast hits to dotplot " \
+                  "matrix of similarities"
+    # arguments parsing
     parser = argparse.ArgumentParser(description=description)
     parser.add_argument(
         '-i', '--input', type=str, help="input fasta sequence", required=True
